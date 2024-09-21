@@ -36,13 +36,18 @@ Compile `ir2.cpp` to LLVM bitcode and answer the following questions:
 **Questions**:
 
 1. What is the _function_ with the largest _basic block_ (most instructions)?
+  @test3_complex_cfg
 2. How many globals are in the _module_?
+  21
 3. Which _function_ has the most _basic blocks_?
+  @test10_switch
+
 4. How many _attribute lists_ are there?
+  5
 5. How many `phi` instructions are there for each optimization level?
-   - `-O1`:
-   - `-O2`:
-   - `-O3`:
+   - `-O1`: 6
+   - `-O2`: 13
+   - `-O3`: 13
 
 **Note**: Remember to keep the reference documentation handy: https://llvm.org/docs/LangRef.html
 
@@ -59,10 +64,15 @@ Open the following link: https://godbolt.org/z/83EKPPh49.
 **Questions**:
 
 1. Which optimization pass (or passes) introduce `phi` nodes?
+    '-O1', '-O2', '-O3'.
 2. Which optimization pass (or passes) create a `select` instruction?
+    '-O1', '-O2', '-O3'.
 3. Why is the `test` function not optimized?
+    It has #1.
 4. What architecture was the module compiled for?
+    ARM.
 5. Which compiler version was used?
+    Apple clang version 15.0.0.
 
 ### Exercise 1d
 
